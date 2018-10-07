@@ -42,9 +42,30 @@
           <div class="box p-half">
             <h1 class="box-heading">Contact</h1>
             <hr>
-            <p class="p-1 main-block">Contact Form coming soon. For now, please contact <a href="mailto:amymomheart@gmail.com">Amy</a>.</p>
-
-            </p>
+            <form name="contact" method="POST" netlify>
+              <ul class="form-style-1">
+                  <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+                  <li>
+                      <label>Email <span class="required">*</span></label>
+                      <input type="email" name="field3" class="field-long" />
+                  </li>
+                  <li>
+                      <label>Subject</label>
+                      <select name="field4" class="field-select">
+                      <option value="Advertise">Question</option>
+                      <option value="Partnership">Comment</option>
+                      <option value="General Question">Prayer Request</option>
+                      </select>
+                  </li>
+                  <li>
+                      <label>Your Message <span class="required">*</span></label>
+                      <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                  </li>
+                  <li>
+                      <input type="submit" value="Submit" />
+                  </li>
+              </ul>
+              <div data-netlify-recaptcha></div>
 
           </div>
         </div>
