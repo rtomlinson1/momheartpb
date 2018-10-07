@@ -42,7 +42,7 @@
           <div class="box p-half">
             <h1 class="box-heading">Contact</h1>
             <hr>
-            <form name="contact_form2" method="POST" netlify>
+            <form class="form-style-1" name="contact_form2" method="POST" netlify>
               <p>
                 <label for="fullname">Full Name <span class="required">*</span></label><input type="text" name="fullname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" />
               </p>
@@ -51,12 +51,10 @@
                 <input type="email" name="email" class="field-long" />
               </p>
               <p>
-                <label for="inquiry">Subject</label>
-                <select name="inquiry" class="field-select">
-                <option value="question">Question</option>
-                <option value="comment">Comment</option>
-                <option value="prayer">Prayer Request</option>
-                </select>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
               </p>
               <p>
                 <label for="message">Your Message <span class="required">*</span></label>
@@ -65,8 +63,33 @@
               <p>
                 <button type="submit">Send</button>
               </p>
-              <div data-netlify-recaptcha></div>
             </form>
+
+
+            <form name="contact_form" netlify>
+              <ul class="form-style-1">
+                  <li><label for="fullname">Full Name <span class="required">*</span></label><input type="text" name="fullname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+                  <li>
+                      <label for="email">Email <span class="required">*</span></label>
+                      <input type="email" name="email" class="field-long" />
+                  </li>
+                  <li>
+                      <label for="inquiry">Subject</label>
+                      <select name="inquiry" class="field-select">
+                      <option value="question">Question</option>
+                      <option value="comment">Comment</option>
+                      <option value="prayer">Prayer Request</option>
+                      </select>
+                  </li>
+                  <li>
+                      <label for="message">Your Message <span class="required">*</span></label>
+                      <textarea name="message" id="field5" class="field-long field-textarea"></textarea>
+                  </li>
+                  <li>
+                      <button type="submit">Send</button>
+                  </li>
+              </ul>
+              <div data-netlify-recaptcha></div>
 
           </div>
         </div>
